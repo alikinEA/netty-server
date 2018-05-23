@@ -1,0 +1,6 @@
+phantom:
+  address: 127.0.0.1:8080
+  uris : ["/api/test/json"]
+  load_profile:
+    load_type: rps
+    schedule: const(10, 1m)
