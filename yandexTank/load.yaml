@@ -1,3 +1,7 @@
+overload:
+  enabled: true
+  package: yandextank.plugins.DataUploader
+  token_file: "token.txt"
 phantom:
   address: 10.242.4.194:8080
   uris : ["/api/test/json"]
