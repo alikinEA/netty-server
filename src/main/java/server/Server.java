@@ -24,6 +24,7 @@ public class Server  {
     }
 
     public static void main(String[] args) throws Exception {
+        Repository.init();
         new Server().run();
     }
 
