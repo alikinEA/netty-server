@@ -10,9 +10,10 @@ phantom:
   "/api/test/json?id=220",
   "/api/test/json?id=23000"
   ]
+  instances: 10000
   headers:
       - "[Connection: Keep-Alive]"
   load_profile:
     load_type: rps
-    schedule: const(500,20)
+    schedule: const(10000,20)
 
