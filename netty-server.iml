@@ -11,6 +11,12 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.10.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-epoll:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-unix-common:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.25.Final" level="project" />
   </component>
 </module>

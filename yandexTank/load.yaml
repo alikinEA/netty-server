@@ -4,10 +4,15 @@ overload:
   token_file: "token.txt"
 phantom:
   address: 10.242.4.194:8080
-  uris : ["/api/test/json"]
+  uris : [
+  "/api/test/json?id=21",
+  "/api/test/json?id=210",
+  "/api/test/json?id=220",
+  "/api/test/json?id=23000"
+  ]
   headers:
       - "[Connection: Keep-Alive]"
   load_profile:
     load_type: rps
-    schedule: line(10000, 100000, 10s)
+    schedule: line(10000, 200000, 10s)
 
