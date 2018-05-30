@@ -3,7 +3,7 @@ overload:
   package: yandextank.plugins.DataUploader
   token_file: "token.txt"
 phantom:
-  address: 10.242.4.194:8080
+  address: localhost:8080
   uris : [
   "/api/test/json?id=21",
   "/api/test/json?id=210",
