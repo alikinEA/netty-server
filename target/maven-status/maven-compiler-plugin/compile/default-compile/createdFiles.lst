@@ -1,3 +1,5 @@
 server/HttpServerInitializer.class
+server/Service.class
 server/Server.class
 server/ServerHandler.class
+server/Repository.class
