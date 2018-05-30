@@ -27,12 +27,12 @@ public class Server  {
 
     public void run() throws Exception {
 
-        EventLoopGroup bossGroup = new EpollEventLoopGroup();
-        EventLoopGroup workerGroup = new EpollEventLoopGroup();
+        EventLoopGroup bossGroup = new NioEventLoopGroup();
+        EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
             ServerBootstrap b = new ServerBootstrap();
             b.group(bossGroup, workerGroup)
-                    .channel(EpollServerSocketChannel.class)
+                    .channel(NioServerSocketChannel.class)
                     //.handler(new LoggingHandler(LogLevel.INFO))
                     .childHandler(new HttpServerInitializer(null)).option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
