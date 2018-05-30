@@ -15,5 +15,5 @@ phantom:
       - "[Connection: Keep-Alive]"
   load_profile:
     load_type: rps
-    schedule: const(10000,20)
+    schedule: step(1000,10000,1000,15s)
 
