@@ -4,8 +4,7 @@ package server; /**
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
-import io.netty.handler.codec.http.HttpServerCodec;
-import io.netty.handler.codec.http.HttpServerExpectContinueHandler;
+import io.netty.handler.codec.http.*;
 import io.netty.handler.ssl.SslContext;
 
 public class HttpServerInitializer extends ChannelInitializer<SocketChannel> {
@@ -22,8 +21,9 @@ public class HttpServerInitializer extends ChannelInitializer<SocketChannel> {
         if (sslCtx != null) {
             p.addLast(sslCtx.newHandler(ch.alloc()));
         }
-        p.addLast(new HttpServerCodec());
-        p.addLast(new HttpServerExpectContinueHandler());
+        p.addLast(new HttpResponseEncoder());
+        p.addLast(new HttpRequestDecoder());
+        p.addLast(new HttpObjectAggregator(Integer.MAX_VALUE));
         p.addLast(new ServerHandler());
     }
 }
