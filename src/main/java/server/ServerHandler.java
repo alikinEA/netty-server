@@ -53,7 +53,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1, NOT_FOUND);
             ctx.write(response).addListener(ChannelFutureListener.CLOSE);
         } finally {
-        ReferenceCountUtil.release( msg );
+            ReferenceCountUtil.release(msg);
         }
 
     }

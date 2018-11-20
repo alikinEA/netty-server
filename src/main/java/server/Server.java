@@ -27,8 +27,8 @@ public class Server  {
 
     public void run() throws Exception {
 
-        EventLoopGroup bossGroup = new EpollEventLoopGroup();
-        EventLoopGroup workerGroup = new EpollEventLoopGroup();
+        EventLoopGroup bossGroup = new EpollEventLoopGroup(1);
+        EventLoopGroup workerGroup = new EpollEventLoopGroup(8);// n core * 2
         try {
             ServerBootstrap b = new ServerBootstrap();
             b.group(bossGroup, workerGroup)
